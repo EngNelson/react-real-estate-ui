@@ -1,5 +1,11 @@
+@import "../../responsive.scss";
+
 .searchBar{
     .type{
+        @include sm{
+            margin-bottom: 5px;
+        }
+
         button{
             padding: 16px 36px;
             border: 1px solid #999;
@@ -12,12 +18,16 @@
             &.active{
                 background-color: black;
                 color: white;
-            }
 
             &:first-child{
                 border-top-left-radius: 5px;
                 border-right: none;
             }
+
+            @include sm{
+                border-bottom: 1px solid #999;
+            }
+        }
             &:last-child{
                 border-top-right-radius: 5px;
                 border-left: none;
@@ -32,11 +42,18 @@
         height: 64px;
         gap: 5px;
 
+        // @include sm{
+        //     flex-direction: column;
+        // }
 
         input{
             border: none;
             padding: 0px 10px;
             width: 200px;
+
+            @include sm{
+                padding: 20px;
+            }
         }
 
         button{
@@ -44,6 +61,10 @@
             cursor: pointer;
             background-color: #fece51;
             flex: 1;
+
+            @include sm{
+                padding: 10px;
+            }
 
             img{
                 width: 24px;
